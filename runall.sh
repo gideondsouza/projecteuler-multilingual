@@ -15,3 +15,14 @@ for py in `ls python3`;
 do
     echo "$py =>" `python3 python3/$py`;
 done
+
+echo "-----------------------------------";
+echo "Compiling* and running the Haskell Solutions 8-)";
+
+for hs in `ls haskell`;
+do 
+    ghc -o $hs.o haskell/$hs;
+    echo `./$hs.o`;
+done 
+rm haskell/*.hi haskell/*.o
+rm *.o

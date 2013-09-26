@@ -22,7 +22,20 @@ echo "Compiling* and running the Haskell Solutions 8-)";
 for hs in `ls haskell`;
 do 
     ghc -o $hs.o haskell/$hs > /dev/null 2>&1;
-    echo "$hs=>" `./$hs.o` 
+    echo "$hs => " `./$hs.o` 
 done 
 rm haskell/*.hi haskell/*.o
 rm *.o
+
+echo "----------------------------------";
+echo "Comping and running C solutions";
+for c in `ls c`;
+do
+    cd c
+    make  ${c%.*} > /dev/null 2>&1
+    echo "$c =>" `./${c%.*}`
+    rm ${c%.*}
+    cd ../
+done
+
+

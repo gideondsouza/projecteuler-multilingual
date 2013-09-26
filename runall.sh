@@ -38,4 +38,9 @@ do
     cd ../
 done
 
-
+echo "----------------------------------";
+echo "Running javascript solutions with node";
+for js in `ls javascript`
+do
+    echo "$js =>" `node javascript/$js`
+done

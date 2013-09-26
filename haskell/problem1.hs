@@ -1,5 +1,5 @@
 
 
-main =  prob1
+main =  print(prob1)
 
 prob1 = sum [x | x <- [1..1000], x `mod` 3 == 0 || x `mod` 5 == 0 ]

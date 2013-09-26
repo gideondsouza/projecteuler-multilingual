@@ -21,8 +21,8 @@ echo "Compiling* and running the Haskell Solutions 8-)";
 
 for hs in `ls haskell`;
 do 
-    ghc -o $hs.o haskell/$hs;
-    echo `./$hs.o`;
+    ghc -o $hs.o haskell/$hs > /dev/null 2>&1;
+    echo "$hs=>" `./$hs.o` 
 done 
 rm haskell/*.hi haskell/*.o
 rm *.o

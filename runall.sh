@@ -1,5 +1,8 @@
 #!/bin/bash
-
+#Yes it's a little terrible looking.
+#I kept each language compiler/run separate because I plan on
+# introducting command line option to compile/run only selective language or maybe 
+# a particular problem.
 echo "------------------------------------";
 echo "Running perl solutions";
 
